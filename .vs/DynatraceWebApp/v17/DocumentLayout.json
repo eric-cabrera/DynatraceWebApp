@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{F0DBC588-50AC-4207-9281-423EBBD98D12}|DynatraceWebApp.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F0DBC588-50AC-4207-9281-423EBBD98D12}|DynatraceWebApp.csproj|c:\\play\\1epic2005\\development\\githubcopilot\\dynatracewebapp\\views\\opentelemetry-dynatrace oneagent.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F0DBC588-50AC-4207-9281-423EBBD98D12}|DynatraceWebApp.csproj|solutionrelative:views\\opentelemetry-dynatrace oneagent.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F0DBC588-50AC-4207-9281-423EBBD98D12}|DynatraceWebApp.csproj|c:\\play\\1epic2005\\development\\githubcopilot\\dynatracewebapp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{F0DBC588-50AC-4207-9281-423EBBD98D12}|DynatraceWebApp.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
@@ -38,11 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "OpenTelemetry-Dynatrace OneAgent.html",
+              "DocumentMoniker": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\Views\\OpenTelemetry-Dynatrace OneAgent.html",
+              "RelativeDocumentMoniker": "Views\\OpenTelemetry-Dynatrace OneAgent.html",
+              "ToolTip": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\Views\\OpenTelemetry-Dynatrace OneAgent.html",
+              "RelativeToolTip": "Views\\OpenTelemetry-Dynatrace OneAgent.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-24T22:52:53.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "master_dynatracewebapp-copy.yml",
               "DocumentMoniker": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\Notes\\master_dynatracewebapp-copy.yml",
               "RelativeDocumentMoniker": "Notes\\master_dynatracewebapp-copy.yml",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "master_dynatracewebapp.yml",
               "DocumentMoniker": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\.github\\workflows\\master_dynatracewebapp.yml",
               "RelativeDocumentMoniker": ".github\\workflows\\master_dynatracewebapp.yml",
@@ -68,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -81,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -94,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -107,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "DynatraceWebApp.csproj",
               "DocumentMoniker": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\DynatraceWebApp.csproj",
               "RelativeDocumentMoniker": "DynatraceWebApp.csproj",
@@ -126,7 +143,7 @@
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAIwB8AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAADwv1MAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T18:13:45.203Z",
               "EditorCaption": ""
