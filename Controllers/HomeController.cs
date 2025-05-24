@@ -70,5 +70,38 @@ namespace DynatraceWebApp.Controllers
             throw new ArgumentException("Intentional argument exception.");
         }
 
+        public IActionResult LogOpenTelemetry()
+        {
+            // Example OpenTelemetry logging (replace with actual implementation as needed)
+            using var activity = System.Diagnostics.Activity.Current ?? new System.Diagnostics.Activity("LogOpenTelemetry");
+            activity.Start();
+            activity.AddTag("custom.tag", "OpenTelemetry log triggered");
+            _logger.LogInformation("OpenTelemetry log created via LogOpenTelemetry action.");
+            activity.Stop();
+            return Content("OpenTelemetry log created.");
+        }
+
+        public IActionResult LogOpenTelemetryException()
+        {
+            using var activity = System.Diagnostics.Activity.Current ?? new System.Diagnostics.Activity("LogOpenTelemetryException");
+            activity.Start();
+            try
+            {
+                throw new InvalidOperationException("This is a test exception for OpenTelemetry.");
+            }
+            catch (Exception ex)
+            {
+                activity.AddTag("exception.type", ex.GetType().ToString());
+                activity.AddTag("exception.message", ex.Message);
+                activity.AddTag("exception.stacktrace", ex.StackTrace ?? "");
+                _logger.LogError(ex, "OpenTelemetry exception log created via LogOpenTelemetryException action.");
+            }
+            finally
+            {
+                activity.Stop();
+            }
+            return Content("OpenTelemetry exception log created.");
+        }
+
     }
 }

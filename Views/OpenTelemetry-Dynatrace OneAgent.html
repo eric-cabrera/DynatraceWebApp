@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenTelemetry & Dynatrace OneAgent Integration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background: #f8f9fa;
+            color: #222;
+        }
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 1.7rem;
+            color: #1565c0;
+            margin-bottom: 1rem;
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+        @media (max-width: 700px) {
+            .container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.2rem;
+            }
+        }
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 1em;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OpenTelemetry to Dynatrace: How to Know When You Have Real Access</h1>
+        <p>
+            <strong>To send OpenTelemetry traces and logs directly to Dynatrace, you need a <em>classic API token</em> with the following scopes:</strong>
+        </p>
+        <ul>
+            <li><code>Ingest OpenTelemetry traces</code></li>
+            <li><code>Ingest logs</code></li>
+        </ul>
+        <p>
+            <strong>With a trial account, you may only be able to generate a <em>Platform Token</em>, which does <u>not</u> support these scopes.</strong>
+        </p>
+        <h2>How to Know You Have Real Access</h2>
+        <ol>
+            <li>Go to <b>Settings &gt; Integration &gt; Dynatrace API</b> in your Dynatrace environment.</li>
+            <li>Try to create a new <b>API token</b> (not a Platform token).</li>
+            <li>
+                <b>If you see the option to add:</b>
+                <ul>
+                    <li><code>Ingest OpenTelemetry traces</code></li>
+                    <li><code>Ingest logs</code></li>
+                </ul>
+                <b>...then you have real access for OpenTelemetry ingestion!</b>
+            </li>
+            <li>
+                <b>If you only see Platform token options, you do <u>not</u> have real access yet.</b>
+            </li>
+        </ol>
+        <h2>Alternative: Use Dynatrace OneAgent</h2>
+        <p>
+            If you cannot create a classic API token, install <b>Dynatrace OneAgent</b> on your server or development machine. OneAgent will automatically instrument your .NET app and send traces/logs to Dynatrace without needing a token.
+        </p>
+        <h2>How to Add Dynatrace OneAgent to a .NET Core Application</h2>
+        <ol>
+            <li>
+                <b>Download OneAgent:</b><br>
+                Log in to Dynatrace, go to <b>Deploy Dynatrace</b> &gt; <b>Start installation</b> and download the OneAgent installer for your OS.
+            </li>
+            <li>
+                <b>Install OneAgent:</b><br>
+                Run the installer on your server or development machine. Follow the on-screen instructions.
+            </li>
+            <li>
+                <b>Restart your .NET Core application.</b>
+            </li>
+            <li>
+                <b>Verify:</b><br>
+                In Dynatrace, go to <b>Transactions & services</b> and check for your application's traces and logs.
+            </li>
+        </ol>
+        <p>
+            <b>Note:</b> No code changes are needed in your .NET Core app when using OneAgent. It auto-instruments your app.
+        </p>
+        <h2>How to Configure OpenTelemetry Exporter for Dynatrace in .NET</h2>
+        <ol>
+            <li>
+                <b>Add NuGet Packages:</b><br>
+                <code>OpenTelemetry.Extensions.Hosting</code>, <code>OpenTelemetry.Instrumentation.AspNetCore</code>, <code>OpenTelemetry.Instrumentation.Http</code>, <code>OpenTelemetry.Exporter.Otlp</code>
+            </li>
+            <li>
+                <b>Update <code>Program.cs</code>:</b><br>
+                <pre>// ...existing code...
+builder.Services.AddOpenTelemetry()
+    .WithTracing(tracerProviderBuilder =>
+    {
+        tracerProviderBuilder
+            .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService("DynatraceWebApp"))
+            .AddAspNetCoreInstrumentation()
+            .AddHttpClientInstrumentation()
+            .AddOtlpExporter(otlpOptions =>
+            {
+                otlpOptions.Endpoint = new Uri("https://&lt;your-environment-id&gt;.live.dynatrace.com/api/v2/otlp/v1/traces");
+                otlpOptions.Headers = "Authorization=Api-Token &lt;your-api-token&gt;";
+            });
+    });
+// ...existing code...
+</pre>
+            </li>
+            <li>
+                <b>Replace <code>&lt;your-environment-id&gt;</code> and <code>&lt;your-api-token&gt;</code> with your Dynatrace values.</b>
+            </li>
+            <li>
+                <b>Restart your application.</b>
+            </li>
+            <li>
+                <b>Check Dynatrace for traces and logs.</b>
+            </li>
+        </ol>
+        <p style="font-size:0.95em;color:#666;">
+            This page is mobile and desktop friendly.
+        </p>
+    </div>
+</body>
+</html>
