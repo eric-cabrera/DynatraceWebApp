@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DynatraceWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f263709bd370de4c5eb0008ed10573526f9c2992")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8478eb529d8f6255da32ead0bf66b5b476cb692e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DynatraceWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DynatraceWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,97 @@
+# Workflow name shown in GitHub Actions UI
+name: Build and deploy ASP.Net Core app to Azure Web App - DynatraceWebApp
+
+# When to trigger this workflow
+on:
+  # Trigger when code is pushed to the master branch
+  push:
+    branches:
+      - master
+  # Also allow manual trigger from GitHub UI
+  workflow_dispatch:
+
+jobs:
+  build:
+    # Use Windows virtual machine for build
+    runs-on: windows-latest
+
+    # Permissions for this job
+    permissions:
+      # Allow this job to read repo contents (required for checkout action)
+      contents: read
+
+    steps:
+      # Checkout your repository code so the workflow can access it
+      - uses: actions/checkout@v4
+
+      # Set up the .NET SDK (version 9.x in this case) for the build
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.x'
+
+      # Build the .NET project in Release configuration
+      - name: Build with dotnet
+        run: dotnet build --configuration Release
+
+      # Publish the built app to a folder inside the .NET SDK root directory
+      - name: dotnet publish
+        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+
+      # Upload the published app folder as an artifact so it can be used in the deploy job
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          # Name of the artifact to upload
+          name: .net-app
+          # Path of the published app folder to upload
+          path: ${{env.DOTNET_ROOT}}/myapp
+
+  deploy:
+    # Run deploy job also on Windows VM
+    runs-on: windows-latest
+
+    # Deploy depends on build job to finish first
+    needs: build
+
+    # Set environment info for GitHub environment feature and deployment URL
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    permissions:
+      # Allow job to get an id-token for authentication (needed by Azure login)
+      id-token: write
+      # Allow reading repo contents (needed for checkout or download actions)
+      contents: read
+
+    steps:
+      # Download the published app artifact from the build job
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
+        with:
+          # Name must match what was uploaded earlier
+          name: .net-app
+      
+      # Log in to Azure using service principal credentials stored as GitHub secrets
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          # Azure client ID secret
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5D03845E702E4328A5C574A2A8ADC90E }}
+          # Azure tenant ID secret
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_AA92AD372804425893030102A7CC100B }}
+          # Azure subscription ID secret
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0A9DE98AAF7E438190577C5B24283618 }}
+
+      # Deploy the downloaded package to the Azure Web App
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v3
+        with:
+          # Name of your Azure Web App to deploy to
+          app-name: 'DynatraceWebApp'
+          # Deployment slot name, usually 'Production'
+          slot-name: 'Production'
+          # The folder or package to deploy, '.' means current directory (where artifact was downloaded)
+          package: .

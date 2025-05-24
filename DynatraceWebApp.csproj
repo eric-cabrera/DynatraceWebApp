@@ -1,9 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- 
+      Enable generation of debug symbols (PDB files) in a portable format.
+
+      These settings help tools like Dynatrace map exceptions to file names and line numbers.
+
+      - DebugType=portable: Creates PDBs in a cross-platform format.
+      - DebugSymbols=true: Ensures PDBs are generated.
+    -->
+		<DebugType>portable</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+	</PropertyGroup>
 
 </Project>
