@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "DynatraceWebApp/1.0.0": {
+        "runtime": {
+          "DynatraceWebApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DynatraceWebApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
