@@ -5,4 +5,20 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+  
+        <button class="btn btn-danger m-2" onclick="location.href='@Url.Action("ThrowException", "Home")'">Throw Exception</button>
+        <button class="btn btn-warning m-2" onclick="location.href='@Url.Action("DivideByZero", "Home")'">Divide by Zero</button>
+        <button class="btn btn-info m-2" onclick="location.href='@Url.Action("NullReference", "Home")'">Null Reference</button>
+
+
+        <button class="btn btn-danger m-2" onclick="location.href='@Url.Action("Http500", "Home")'">HTTP 500 Error</button>
+        <button class="btn btn-secondary m-2" onclick="location.href='@Url.Action("Delay", "Home")'">Simulate Delay</button>
+        <button class="btn btn-warning m-2" onclick="location.href='@Url.Action("LogWarning", "Home")'">Log Warning</button>
+        <button class="btn btn-danger m-2" onclick="location.href='@Url.Action("ThrowArgumentException", "Home")'">Throw ArgumentException</button>
+
+    </div>
+
+
 </div>

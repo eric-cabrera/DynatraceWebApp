@@ -25,4 +25,11 @@ C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\ref
 C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\DynatraceWebApp.pdb
 C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\DynatraceWebApp.genruntimeconfig.cache
 C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\ref\DynatraceWebApp.dll
-C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\DynatraceWebApp.sourcelink.json
+C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\staticwebassets\msbuild.DynatraceWebApp.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\staticwebassets\msbuild.DynatraceWebApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\staticwebassets\msbuild.build.DynatraceWebApp.props
+C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.DynatraceWebApp.props
+C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.DynatraceWebApp.props
+C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Play\1Epic2005\Development\GitHubCopilot\DynatraceWebApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0DBC588-50AC-4207-9281-423EBBD98D12}|DynatraceWebApp.csproj|c:\\play\\1epic2005\\development\\githubcopilot\\dynatracewebapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0DBC588-50AC-4207-9281-423EBBD98D12}|DynatraceWebApp.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0DBC588-50AC-4207-9281-423EBBD98D12}|DynatraceWebApp.csproj|c:\\play\\1epic2005\\development\\githubcopilot\\dynatracewebapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F0DBC588-50AC-4207-9281-423EBBD98D12}|DynatraceWebApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0DBC588-50AC-4207-9281-423EBBD98D12}|DynatraceWebApp.csproj|c:\\play\\1epic2005\\development\\githubcopilot\\dynatracewebapp\\dynatracewebapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F0DBC588-50AC-4207-9281-423EBBD98D12}|DynatraceWebApp.csproj|solutionrelative:dynatracewebapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T18:15:09.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DynatraceWebApp",
+              "DocumentMoniker": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\DynatraceWebApp.csproj",
+              "RelativeDocumentMoniker": "DynatraceWebApp.csproj",
+              "ToolTip": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\DynatraceWebApp.csproj",
+              "RelativeToolTip": "DynatraceWebApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-24T18:14:05.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Play\\1Epic2005\\Development\\GitHubCopilot\\DynatraceWebApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAmwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T18:13:45.203Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
